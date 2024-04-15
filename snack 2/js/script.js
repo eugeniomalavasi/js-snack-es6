@@ -1,5 +1,4 @@
-teams = [
-    {
+teams = [{
         teamName: "Bologna",
         points: 0,
         fouls: 0
@@ -21,10 +20,15 @@ teams = [
     },
 ]
 
-
+let foulsResult;
+console.log(foulsResult);
 
 teams.forEach((curTeam) => {
     curTeam.points = Math.floor((Math.random() * 100) + 1);
     curTeam.fouls = Math.floor((Math.random() * 100) + 1);
-    console.log(curTeam);
+    foulsResult = curTeam.fouls
 })
+console.log(teams);
+// const newTeamsArray = [...teams];
+const {fouls,teamName} = teams; 
+console.log(fouls,teamName);
