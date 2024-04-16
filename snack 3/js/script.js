@@ -13,38 +13,42 @@ const automobili = [
 
 let dieselCars = []
 let petrolCars = []
-let otherCars = []
-let carToCheck;
-// automobili.forEach((curCar) => {
-//     if (curCar.alimentazione === curCar.alimentazione) {
-//         baseCar = curCar;
-//         dieselCars.push(baseCar);
-//     } 
-// })
-
-petrolCars = automobili.filter((curCar) => {
-    if (curCar.alimentazione === "benzina") {
-        return true
-    } else {
-        return false
-    }
-})
 console.log(petrolCars);
+let otherCars = []
 
-dieselCars = automobili.filter((curCar) => {
-    if (curCar.alimentazione === "diesel") {
-        return true
+automobili.forEach((curCar) => {
+    if (curCar.alimentazione === "benzina") {
+        petrolCars.push(curCar)
+    } else if (curCar.alimentazione === "diesel") {
+        dieselCars.push(curCar)
     } else {
-        return false
+        otherCars.push(curCar)
     }
 })
-console.log(dieselCars);
 
-otherCars = automobili.filter((curCar) => {
-    if (curCar.alimentazione !== "diesel" && curCar.alimentazione !== "benzina") {
-        return true
-    } else {
-        return false
-    }
-})
-console.log(otherCars);
+// petrolCars = automobili.filter((curCar) => {
+//     if (curCar.alimentazione === "benzina") {
+//         return true
+//     } else {
+//         return false
+//     }
+// })
+// console.log(petrolCars);
+
+// dieselCars = automobili.filter((curCar) => {
+//     if (curCar.alimentazione === "diesel") {
+//         return true
+//     } else {
+//         return false
+//     }
+// })
+// console.log(dieselCars);
+
+// otherCars = automobili.filter((curCar) => {
+//     if (curCar.alimentazione !== "diesel" && curCar.alimentazione !== "benzina") {
+//         return true
+//     } else {
+//         return false
+//     }
+// })
+// console.log(otherCars);
