@@ -20,15 +20,19 @@ teams = [{
     },
 ]
 
-let foulsResult;
-console.log(foulsResult);
+
 
 teams.forEach((curTeam) => {
-    curTeam.points = Math.floor((Math.random() * 100) + 1);
-    curTeam.fouls = Math.floor((Math.random() * 100) + 1);
-    foulsResult = curTeam.fouls
+    curTeam.points = getRndInteger(0,100);
+    curTeam.fouls = getRndInteger(0,100);
 })
-console.log(teams);
-// const newTeamsArray = [...teams];
-const {fouls,teamName} = teams; 
-console.log(fouls,teamName);
+
+const newTeams = teams.map((curTeam) => {
+    const { teamName, fouls } = curTeam;
+    return { teamName, fouls };
+})
+console.log(newTeams);
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max-min + 1)) + min;
+};
