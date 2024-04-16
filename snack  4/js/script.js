@@ -16,12 +16,14 @@ people = [
     }
 ]
 
-let patente = "";
-people.map((curPerson) => {
+const newArray = people.map((curPerson) => {
+    let patente = "";
     if(curPerson.età <= 18) {
-        patente = "puoi guidare";
+        return (`il nome è ${curPerson.nome} il cognome è ${curPerson.cognome} e non puoi guidare`);
     } else {
-        patente = "non puoi guidare";
+        return (`il nome è ${curPerson.nome} il cognome è ${curPerson.cognome} e puoi guidare`);
     }
-    console.log(`il nome è ${curPerson.nome} il cognome è ${curPerson.cognome} e ${patente}`); 
+    // return (`il nome è ${curPerson.nome} il cognome è ${curPerson.cognome} e ${patente}`); 
 })
+
+console.log(newArray);
