@@ -1,18 +1,27 @@
 people = [
     {
         nome: "Eugenio",
-        cognone: "Malavasi",
+        cognome: "Malavasi",
         età: "33",
     },
     {
         nome: "Gino",
-        cognone: "Lavandino",
+        cognome: "Lavandino",
         età: "108",
     },
     {
         nome: "Tino",
-        cognone: "Cagliai",
+        cognome: "Cagliai",
         età: "6",
     }
 ]
 
+let patente = "";
+people.map((curPerson) => {
+    if(curPerson.età <= 18) {
+        patente = "puoi guidare";
+    } else {
+        patente = "non puoi guidare";
+    }
+    console.log(`il nome è ${curPerson.nome} il cognome è ${curPerson.cognome} e ${patente}`); 
+})
